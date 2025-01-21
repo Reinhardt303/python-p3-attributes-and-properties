@@ -12,7 +12,7 @@ APPROVED_BREEDS = [
 ]
 
 class Dog:
-    def __init__(self, name = 'default name', breed = 'default breed'):
+    def __init__(self, name = 'default name', breed = 'Pug'):
         self.name = name
         self.breed = breed
 
@@ -20,7 +20,7 @@ class Dog:
         return self._name
     
     def set_name(self, name):
-        if (type(self.name) == str) and (1 <= len(self.name) <= 25):
+        if (type(name) == str) and (1 <= len(name) <= 25):
            # print(f'Setting name to {name}.')
             self._name = name
         else:
@@ -30,7 +30,7 @@ class Dog:
         return self._breed
     
     def set_breed(self, breed):
-        if self.breed in APPROVED_BREEDS:
+        if breed in APPROVED_BREEDS:
            # print(f'Setting breed to {breed}.')
            self._breed = breed
         else:
